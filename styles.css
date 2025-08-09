@@ -1,0 +1,69 @@
+body {
+    font-family: 'Inter', sans-serif; /* Using Inter font, common for modern UIs */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    min-height: 100vh;      /* Take full viewport height */
+    margin: 0;
+    background-color: #f4f7f6; /* Light background for the page */
+    color: #333;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 2.5em;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 1.5em; /* Space between elements */
+    width: 90%; /* Take up most of the width */
+    max-width: 800px; /* Maximum width for larger screens */
+    border: 1px solid #e0e0e0;
+}
+
+label {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 0.5em; /* Space below the label */
+    text-align: center;
+}
+
+textarea#code-input {
+    width: calc(100% - 20px); /* Full width minus padding consideration */
+    min-height: 300px; /* Make it significantly tall for code */
+    padding: 10px;
+    border: 1px solid #a0a0a0;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+    font-size: 0.95em;
+    line-height: 1.5;
+    resize: vertical; /* Allow vertical resizing only */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08); /* Inner shadow for depth */
+}
+
+button[type="submit"] {
+    padding: 1em 2em;
+    background-color: #007bff; /* Primary blue color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center; /* Center the button within the flex column */
+    width: 50%; /* Make button take half the form width */
+    max-width: 250px; /* Max width for the button */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+button[type="submit"]:active {
+    background-color: #004085;
+    transform: translateY(0); /* Press effect */
+}
