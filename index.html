@@ -8,9 +8,22 @@
 </head>
 <body>
     <form id="code-entry">
-        <label for="code-input">Enter your code here</label>
-        <input type="text" id="problem-title"></input>
-        <textarea name="code" id="code-input" placeholder="//Python code goes here"></textarea>
+        <input type="text" id="problem-title" placeholder="//Problem Title. Ex: 1306. Jump Game III"></input>
+        <textarea name="code" id="code-input" placeholder="
+//Python code goes here
+class Solution:
+    def canReach(self, arr: List[int], start: int) -> bool:
+        stack = [start]
+        arr[start] *= -1 # mark
+        while stack: 
+            i = stack.pop()
+            if arr[i] == 0: return True 
+            for ii in i - arr[i], i + arr[i]: 
+                if 0 &lt = ii &lt len(arr) and arr[ii] >= 0: 
+                    stack.append(ii)
+                    arr[ii] *= -1 
+        return False 
+        "></textarea>
         <button id="add-to-pdf" type="button">Add to pdf</button>
         <button id="view-pdf" type="button">View PDF</button>
         <button id="delete-all" type="button">Delete All Pages</button>
