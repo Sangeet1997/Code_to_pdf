@@ -1,7 +1,6 @@
 
 const add_button = document.getElementById("add-to-pdf")
 const view_button = document.getElementById("view-pdf")
-const delete_button = document.getElementById("delete-from-pdf")
 const delete_all_button = document.getElementById("delete-all")
 console.log("Hello")
 
@@ -92,23 +91,6 @@ add_button.addEventListener("click",()=>{
 view_button.addEventListener("click", async ()=>{
     console.log("View Button clicked");
     await pdfMake.createPdf(dd).open();
-});
-
-delete_button.addEventListener("click", async ()=>{
-    console.log("Delete button clicked");
-    const page_number = document.getElementById("delete-page").value;
-    let i = 0;
-    let page_count = 0;
-    while(i < dd.content.length && page_count < page_number){
-        console.log(i);
-        if(dd.content[i].length !== 0){
-            page_count += 1;
-        }
-        i += 1;
-    }
-    if(page_count === page_number){
-        dd.content[i-1] = {}
-    }
 });
 
 delete_all_button.addEventListener("click",()=>{
