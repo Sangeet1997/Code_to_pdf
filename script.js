@@ -13,14 +13,13 @@ const text_formatting = (code_lines) => {
     dd["content"][0]["text"] = []
     console.log(dd)
     for(let line of code_lines){
-        if(line.includes(" for")){
-            let i = line.indexOf(" for")
+        if(line.includes("#")){
+            let i = line.indexOf("#")
             dd["content"][0]["text"].push(line.slice(0,i))
             dd["content"][0]["text"].push({
-                "text": line.slice(i,i+4),
-                "bold":true
+                "text": line.slice(i),
+                "color":"grey"
             })
-            dd["content"][0]["text"].push(line.slice(i+4))
         }
         else{
             dd["content"][0]["text"].push(line)
