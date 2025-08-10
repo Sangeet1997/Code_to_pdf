@@ -9,9 +9,17 @@
 <body>
     <form id="code-entry">
         <label for="code-input">Enter your code here</label>
+        <input type="text" id="problem-title"></input>
         <textarea name="code" id="code-input"></textarea>
-        <button type="submit">Add to pdf</button>
+        <button id="add-to-pdf" type="button">Add to pdf</button>
+        <button id="view-pdf" type="button">View PDF</button>
+        <button id="delete-from-pdf" type="button">Delete from PDF</button>
     </form>
+    <ul>
+
+    </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/vfs_fonts.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
