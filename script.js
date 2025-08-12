@@ -54,8 +54,14 @@ const text_formatting = (code_lines, problem_title) => {
         text:["\n"],
         style:"code"
     }
+    let j = 0
     for(let line of code_lines){
-
+        
+        j += 0
+        code_block.text.push({
+            "text": `${j} `,
+            "color":"grey"
+        })
         if(line.includes("#")){
             let i = line.indexOf("#")
             code_block.text.push(line.slice(0,i))
